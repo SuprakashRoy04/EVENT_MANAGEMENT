@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Membership</title>
+</head>
+
+<body style="
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family: Arial;
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+">
+
+    <div style="
+        width:520px;
+        padding:40px;
+        background:white;
+        border-radius:12px;
+        box-shadow:0px 10px 25px rgba(0,0,0,0.3);
+    ">
+
+        <h2 style="text-align:center; margin-bottom:30px;">
+            Add Membership
+        </h2>
+
+        <!-- Flash Message (Optional if you add backend message later) -->
+        
+        <form method="POST">
+
+            <!-- Name -->
+            <div style="margin-bottom:18px;">
+                <label><strong>Name</strong></label>
+                <input type="text" name="name" required
+                    placeholder="Enter Full Name"
+                    style="width:100%; padding:10px; margin-top:6px; border-radius:6px; border:1px solid #ccc;">
+            </div>
+
+            <!-- Phone -->
+            <div style="margin-bottom:22px;">
+                <label><strong>Phone</strong></label>
+                <input type="tel" name="phone" required pattern="[0-9]{10}"
+                    placeholder="Enter 10-digit phone number"
+                    style="width:100%; padding:10px; margin-top:6px; border-radius:6px; border:1px solid #ccc;">
+                <small style="color:gray;">Enter 10 digit number only</small>
+            </div>
+
+            <!-- Duration -->
+            <div style="margin-bottom:25px;">
+                <label><strong>Duration</strong></label>
+                <div style="margin-top:10px;">
+                    <input type="radio" name="duration" value="6" checked> 6 Months
+                    <br>
+                    <input type="radio" name="duration" value="12"> 1 Year
+                    <br>
+                    <input type="radio" name="duration" value="24"> 2 Years
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Add Membership"
+                style="
+                    width:100%;
+                    padding:13px;
+                    background-color:#4CAF50;
+                    color:white;
+                    border:none;
+                    border-radius:6px;
+                    font-size:16px;
+                    cursor:pointer;
+                    font-weight:bold;
+                ">
+             {% if success %}
+    <p style="
+        margin-top:20px;
+        padding:10px;
+        background:#e8f5e9;
+        color:#2e7d32;
+        text-align:center;
+        border-radius:6px;
+        font-weight:bold;">
+        ✅ Membership Added Successfully!
+    </p>
+{% endif %}
+
+        </form>
+
+        <br>
+
+        <a href="/dashboard"
+           style="display:block; text-align:center; text-decoration:none; color:#333; font-weight:bold;">
+           ← Back to Dashboard
+        </a>
+
+    </div>
+
+</body>
+</html>

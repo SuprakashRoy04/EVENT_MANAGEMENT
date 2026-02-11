@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+
+<body style="
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family: Arial;
+    background: linear-gradient(135deg, #4CAF50, #2e7d32);
+">
+
+    <div style="
+        width:450px;
+        padding:40px;
+        background:white;
+        border-radius:12px;
+        box-shadow:0px 10px 25px rgba(0,0,0,0.2);
+    ">
+
+        <h2 style="
+            text-align:center;
+            margin-bottom:30px;
+        ">
+            Event Management Login
+        </h2>
+
+        <form method="POST">
+
+            <div style="margin-bottom:20px;">
+                <label>Username</label>
+                <input type="text" name="username" required
+                    style="
+                        width:100%;
+                        padding:12px;
+                        margin-top:5px;
+                        border:1px solid #ccc;
+                        border-radius:6px;
+                    ">
+            </div>
+
+            <div style="margin-bottom:25px;">
+                <label>Password</label>
+                <input type="password" name="password" required
+                    style="
+                        width:100%;
+                        padding:12px;
+                        margin-top:5px;
+                        border:1px solid #ccc;
+                        border-radius:6px;
+                    ">
+            </div>
+
+            <input type="submit" value="Login"
+                style="
+                    width:100%;
+                    padding:12px;
+                    background-color:#4CAF50;
+                    color:white;
+                    border:none;
+                    border-radius:6px;
+                    font-size:16px;
+                    cursor:pointer;
+                ">
+
+        </form>
+
+    </div>
+
+</body>
+</html>

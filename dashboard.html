@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+
+<body style="
+    margin:0;
+    font-family: Arial;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+">
+
+    <div style="
+        width:600px;
+        padding:40px;
+        background:white;
+        border-radius:12px;
+        box-shadow:0px 10px 25px rgba(0,0,0,0.3);
+        text-align:center;
+    ">
+
+        <h2 style="margin-bottom:30px;">Dashboard</h2>
+
+        {% if role == 'admin' %}
+            <div style="margin-bottom:15px;">
+                <a href="/add_membership"
+                   style="display:block; padding:12px; background:#4CAF50; color:white; text-decoration:none; border-radius:6px; margin-bottom:10px;">
+                   Add Membership
+                </a>
+
+                <a href="/update_membership"
+                   style="display:block; padding:12px; background:#2196F3; color:white; text-decoration:none; border-radius:6px; margin-bottom:10px;">
+                   Update Membership
+                </a>
+            </div>
+        {% endif %}
+
+        <a href="/report"
+           style="display:block; padding:12px; background:#ff9800; color:white; text-decoration:none; border-radius:6px; margin-bottom:10px;">
+           View Reports
+        </a>
+
+        <a href="/transactions"
+           style="display:block; padding:12px; background:#9c27b0; color:white; text-decoration:none; border-radius:6px; margin-bottom:20px;">
+           Transactions
+        </a>
+
+        <a href="/logout"
+           style="display:block; padding:12px; background:#f44336; color:white; text-decoration:none; border-radius:6px;">
+           Logout
+        </a>
+
+    </div>
+
+</body>
+</html>
