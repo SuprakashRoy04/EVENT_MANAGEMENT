@@ -50,7 +50,7 @@ Password: user123
 
 - **Backend:** Python (Flask)
 - **Database:** SQLite
-- **Frontend:** HTML + CSS
+- **Frontend:** HTML + CSS+Streamlit
 - **Authentication:** Flask Sessions
 
 
