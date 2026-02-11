@@ -2,7 +2,7 @@ Event Membership Management System
 
 A Flask-based web application for managing event memberships and transactions with role-based authentication and session management.
 
-🔑 Default Login Credentials
+🔑 Default Login Credentials:
 Admin
 
 Username: admin
